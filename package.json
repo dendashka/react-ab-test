@@ -1,0 +1,52 @@
+{
+    "name": "react-ab-test",
+    "version": "1.0.0",
+    "description": "",
+    "author": "IDF denis.dashkevich",
+    "license": "ISC",
+    "main": "dist/react-ab-test.cjs.js",
+    "module": "dist/react-ab-test.esm.js",
+    "scripts": {
+        "develop": "node ./scripts/develop.js",
+        "build:module": "node ./scripts/build-module.js",
+        "prepare": "npm run build:module",
+        "format": "prettier --write '**/*.{js,jsx,md,json}'"
+    },
+    "lint-staged": {
+        "*.{md,json}": [
+            "prettier --check"
+        ],
+        "*.{js,jsx}": [
+            "prettier --check"
+        ]
+    },
+    "homepage": "https://github.com/gitmoneyman/react-ab-test",
+    "exports": {
+        ".": {
+            "require": "./dist/react-ab-test.cjs.js",
+            "import": "./dist/react-ab-test.esm.js"
+        }
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "devDependencies": {
+        "chokidar": "^4.0.3",
+        "esbuild": "^0.25.6",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.10.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.34.3",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.2",
+        "prettier": "^2.5.1",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0 || ^19.0.0",
+        "react-dom": ">=18.0.0 || ^19.0.0"
+    }
+}

@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Output of 'npm pack'
+*.tgz
+
+# Mac files
+.DS_Store
+
+# Editor folders
+.idea
+.vscode
